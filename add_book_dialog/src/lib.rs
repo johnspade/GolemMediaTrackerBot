@@ -181,15 +181,4 @@ impl Guest for Component {
             handle_update(state, &api, &update)
         })
     }
-
-    fn hello() -> String {
-        "Hello from Rust!".to_string()
-    }
-
-    fn state() -> Result<String, String> {
-        with_state(|state| {
-            serde_json::to_string(&state.dialog_state)
-                .map_err(|err| format!("JSON serialization failed: {}", err))
-        })
-    }
 }

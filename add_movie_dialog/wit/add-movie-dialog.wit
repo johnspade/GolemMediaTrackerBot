@@ -12,9 +12,6 @@ interface api {
   }
 
   step: func(update: string) -> result<dialog-result, string>
-
-  hello: func() -> string
-  state: func() -> result<string, string>
 }
 
 world add-movie-dialog {
