@@ -1,0 +1,22 @@
+package golem:template
+
+interface api {
+  record dialog-result {
+    book: option<book>
+  }
+
+  record book {
+    title: string,
+    author: string,
+    rating: u32
+  }
+
+  step: func(update: string) -> result<dialog-result, string>
+
+  hello: func() -> string
+  state: func() -> result<string, string>
+}
+
+world add-book-dialog {
+  export api
+}

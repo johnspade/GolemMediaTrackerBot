@@ -1,0 +1,22 @@
+package golem:template
+
+interface api {
+  record dialog-result {
+    movie: option<movie>
+  }
+
+  record movie {
+    title: string,
+    year: u32,
+    rating: u32
+  }
+
+  step: func(update: string) -> result<dialog-result, string>
+
+  hello: func() -> string
+  state: func() -> result<string, string>
+}
+
+world add-movie-dialog {
+  export api
+}

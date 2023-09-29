@@ -1,0 +1,22 @@
+package golem:template
+
+interface api {
+  record dialog-result {
+    quote: option<quote>
+  }
+
+  record quote {
+    text: string,
+    title: string,
+    author: string,
+  }
+
+  step: func(update: string) -> result<dialog-result, string>
+
+  hello: func() -> string
+  state: func() -> result<string, string>
+}
+
+world add-quote-dialog {
+  export api
+}

@@ -1,0 +1,9 @@
+package golem:template
+
+interface api {
+  start-bot: func() -> ()
+}
+
+world golem-telegram-bot {
+  export api
+}

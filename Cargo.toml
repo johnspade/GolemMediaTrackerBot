@@ -1,0 +1,15 @@
+[workspace]
+resolver = "2"
+
+members = [
+    "add_book_dialog",
+    "add_movie_dialog",
+    "add_quote_dialog",
+    "bot",
+    "dialog_engine",
+    "telegram_api",
+]
+
+[profile.release]
+lto = true
+opt-level = 's'
