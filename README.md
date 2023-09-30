@@ -1,4 +1,4 @@
-# GolemMediaTrackerBot
+# Media Tracker
 
 A Telegram chatbot to track your media consumption: add books read, movies watched and favorite quotes.
 
@@ -62,5 +62,4 @@ golem-cli worker add \
 ## Disclaimer
 
 Golem Cloud is currently in preview for developers. 
-This bot is a proof of concept and is not intended to store important information. 
-Currently, added entities are only stored in the bot's memory in Golem Cloud.
+This bot is a proof of concept and is not intended to store important information.
