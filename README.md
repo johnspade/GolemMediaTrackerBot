@@ -48,6 +48,17 @@ sequenceDiagram
     Bot -->> AddBookDialog: Delete AddBookDialog
 ```
 
+The bot requires two secret tokens: Telegram Bot API token and Golem Cloud token. 
+They can be passed as environment variables when adding a worker to Golem Cloud:
+```
+golem-cli worker add \
+  --worker-name golem-telegram-bot-worker \
+  --template-name golem-telegram-bot \
+  --project-name MediaTrackerTelegramBot \
+  --env GOLEM_TOKEN=<token> \
+  --env TELEGRAM_TOKEN=<token>
+```
+
 ## Disclaimer
 
 Golem Cloud is currently in preview for developers. 
