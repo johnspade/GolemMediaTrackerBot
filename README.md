@@ -36,7 +36,6 @@ flowchart TD
 sequenceDiagram
     actor User
     User ->> Bot: "/add_book"
-    create participant AddBookDialog
     Bot -->> AddBookDialog: Create AddBookDialog
     AddBookDialog ->> User: "Enter title:"
     User ->> AddBookDialog: "Catcher in the Rye"
@@ -46,7 +45,6 @@ sequenceDiagram
     User ->> AddBookDialog: "5"
     AddBookDialog ->> Bot: Save book (title, author, rating)
     Bot ->> User: "Added book: Catcher in the Rye by J. D. Salinger (rating: 5)"
-    destroy AddBookDialog
     Bot -->> AddBookDialog: Delete AddBookDialog
 ```
 
