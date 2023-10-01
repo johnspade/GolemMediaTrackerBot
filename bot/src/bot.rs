@@ -152,7 +152,7 @@ fn handle_commands(state: &mut State, api: &Api, message: &Message, update: &Upd
             if let Some(quotes) = state.quotes.get(&user_id) {
                 let mut text = "Your quotes:\n".to_string();
                 for quote in quotes {
-                    text.push_str(&format!("\"{}\" from {} by {}", quote.text, quote.title, quote.author));
+                    text.push_str(&format!("\"{}\" from {} by {}\n\n", quote.text, quote.title, quote.author));
                 }
                 send_message(api, chat_id, &text);
             } else {
